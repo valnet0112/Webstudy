@@ -1,0 +1,46 @@
+package kr.or.ddit.board.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import lombok.extern.slf4j.Slf4j;
+
+/**
+ * 비동기 처리 기반(RESTful URI)
+ * 다건 조회 : /{boardType}/board GET
+ * 단건 조회 : /{boardType}/board/{boNo} GET
+ * 등록 : /{boardType}/board POST
+ * 수정 : /{boardType}/board/{boNo} PUT
+ * 삭제 : /{boardType}/board/{boNo} DELETE
+ * 
+ * 동기 처리 기반(non-RESTful URI)
+ * 다건 조회 : /{boardType}/board GET
+ * 단건 조회 : /{boardType}/board/detail?what=글번호 GET
+ * 등록 폼 : /{boardType}/board/insert GET
+ * 등록 : /{boardType}/board/insert POST
+ * 수정 폼 : /{boardType}/board/update?what=글번호 GET
+ * 수정 : /{boardType}/board/update POST
+ * 삭제 : /{boardType}/board/delete POST
+ *
+ */
+@Slf4j
+@Controller
+@RequestMapping("/{boardType}/board")
+public class BoardRetrieveController {
+	// /notice/board
+	@GetMapping
+	public String list(@PathVariable String boardType) {
+		log.info("게시판 종류 : {}", boardType);
+		return "board/boardList";
+	}
+	
+	// /notice/board/34	
+	@GetMapping("{boNo}")
+	public String detail(@PathVariable String boardType, @PathVariable int boNo) {
+		log.info("게시판 종류 : {}, 글번호 : {}", boardType, boNo);
+		return "board/boardView";
+	}
+
+}

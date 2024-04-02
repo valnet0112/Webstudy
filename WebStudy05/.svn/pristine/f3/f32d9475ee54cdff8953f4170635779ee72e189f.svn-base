@@ -1,0 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
+<div id="inner-card-body" class="card-body overflow-auto" style="height: 82vh">
+	<div  id="inner-card-body" class="table-responsive text-nowrap">
+		<table class="table">
+			<tbody class="table-border-bottom-0">
+				<tr class="table-primary">
+					<td><strong>${equip.equipName}</strong></td>
+					<td><strong>${equip.equipDetail}</strong></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<hr>
+	<div style="height: 100vh">
+		<div id="calendar" class="h-68"></div>
+	</div>
+</div>	

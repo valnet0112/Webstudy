@@ -1,0 +1,15 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<div id="inner-card-body" class="card-body" style="height: 82vh">
+	<div class="mb-2">
+		<c:forEach items="${dptList }" var="dpt" varStatus="status">
+			<input type="checkbox" class="form-check-input calendar-box" data-cal-who="D${status.count }">
+			<label class="form-check-label">${dpt}</label>
+			&nbsp
+		</c:forEach>
+	</div>
+	<div style="height: 74vh">
+		<div id="calendar" class="h-100"> </div>
+	</div>
+</div>

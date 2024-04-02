@@ -1,0 +1,57 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<style>
+/* 추가한 CSS */
+th:nth-child(4), td:nth-child(4) {
+	width: 30%; /* 원하는 너비로 조정 */
+}
+</style>
+<div class="row">
+
+	<div class="col-lg-10 col-md-0">
+		<div class="row">
+			<div class="col col-md-12 col-6">
+				<div class="card">
+					<!-- Bordered Table -->
+					<div class="card-body" id="inner-card-body" style="height: 82vh">
+						<h5 class="card-header">임시 보관 문서</h5>
+						<div class="table-responsive text-nowrap">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>저장일</th>
+										<th>결재양식</th>
+										<th>긴급</th>
+										<th>제목</th>
+										<th>상태</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>2011-02-11</td>
+										<td>양식이름</td>
+										<td>긴급아이콘</td>
+										<td><i class="fab fa-react fa-lg text-info me-3"></i> <strong>문서제목~~</strong>
+										</td>
+										<td><span class="badge bg-label-info me-1">임시저장</span></td>
+									</tr>
+									<tr>
+										<td>2011-02-11</td>
+										<td>양식이름</td>
+										<td>긴급아님</td>
+										<td><i class="fab fa-vuejs fa-lg text-success me-3"></i>
+											<strong>문서제목2번</strong></td>
+										<td><span class="badge bg-label-info me-1">임시저장</span></td>
+									</tr>
+
+								</tbody>
+							</table>
+							여기 들어가면 뭐지
+						</div>
+					</div>
+					<!-- Bootstrap Table with Caption -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
